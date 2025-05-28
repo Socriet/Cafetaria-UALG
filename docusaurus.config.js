@@ -51,82 +51,62 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+  themeConfig: {
+    navbar: {
+      title: 'UAlg Cafeteria App',
+      logo: {
+        alt: 'UAlg Logo',
+        src: 'img/unnamed.jpg', // Make sure this is placed in static/img/
+      },
+      items: [
+        { to: '/docs/intro', label: 'How It Works', position: 'left' },
+        { to: '/docs/manager', label: 'Manager Features', position: 'left' },
+        { to: '/docs/user', label: 'User Guide', position: 'left' },
+        { to: '/docs/schedule-example', label: 'Schedule Example', position: 'left' },
+        {
+          href: 'https://github.com/Nitram-MMO/your-repo',
+          label: 'GitHub',
+          position: 'right',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Guides',
+          items: [
+            { 
+              label: 'Cafeteria App',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Schedule Example',
+              to: '/docs/schedule-example',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Universidade do Algarve',
+              href: 'https://www.ualg.pt/',
+            },
+            {
+              label: 'Inspiration: UAlg Cafeteria',
+              href: 'https://www.ualg.pt/ementas',
+            },
+          ],
+        },
+      ],
+      copyright: `© ${new Date().getFullYear()} Universidade do Algarve`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  },
 };
 
 export default config;
