@@ -19,3 +19,16 @@ html[data-theme='dark'] {
   --ifm-footer-background-color: #001f40;
   --ifm-footer-color: #ffffff;
 }
+
+/* Custom tweaks */
+.herotitle {
+  color: var(--ifm-color-primary);
+}
+
+.herosubtitle {
+  color: #333;
+}
+
+.menu__link {
+  font-weight: 500;
+}
